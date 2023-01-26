@@ -7,11 +7,13 @@
   "scripts": {
     "test": "echo \"no test\"",
     "dist": "tsc",
-    "build": "pkg"
+    "build": "npm run dist && pkg ."
   },
   "pkg": {
     "scripts": "dist/**/*.js",
-    "targets": ["node12-win-x64"],
+    "targets": [
+      "node12-win-x64"
+    ],
     "outpath": "build"
   },
   "repository": {
@@ -34,5 +36,11 @@
     "pkg": "^5.8.0",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "compressing": "^1.7.0",
+    "prismarine-nbt": "^2.2.1",
+    "yaml": "^2.2.1"
   }
 }
