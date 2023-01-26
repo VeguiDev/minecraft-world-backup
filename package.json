@@ -3,8 +3,16 @@
   "version": "1.0.0",
   "description": "A tool to create a backups of an world.",
   "main": "dist/main.js",
+  "bin": "dist/cli.js",
   "scripts": {
-    "test": "echo \"no test\""
+    "test": "echo \"no test\"",
+    "dist": "tsc",
+    "build": "pkg"
+  },
+  "pkg": {
+    "scripts": "dist/**/*.js",
+    "targets": ["node12-win-x64"],
+    "outpath": "build"
   },
   "repository": {
     "type": "git",
